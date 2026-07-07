@@ -19,8 +19,8 @@
 
 ```powershell
 git status
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "工程目录" --keep-logs
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "工程目录" --keep-logs --yes
+python clean_embedded.py -r "path\to\your_project" --keep-logs
+python clean_embedded.py -r "path\to\your_project" --keep-logs --yes
 git status
 ```
 
@@ -31,25 +31,25 @@ git status
 先预览，不删除任何文件：
 
 ```powershell
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "F:\STM32project\你的工程目录"
+python clean_embedded.py -r "path\to\your_project"
 ```
 
 确认预览列表没问题后，真正删除：
 
 ```powershell
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "F:\STM32project\你的工程目录" --yes
+python clean_embedded.py -r "path\to\your_project" --yes
 ```
 
 保留日志文件并删除中间文件：
 
 ```powershell
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "F:\STM32project\你的工程目录" --keep-logs --yes
+python clean_embedded.py -r "path\to\your_project" --keep-logs --yes
 ```
 
 查看完整待删除清单：
 
 ```powershell
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "F:\STM32project\你的工程目录" --details
+python clean_embedded.py -r "path\to\your_project" --details
 ```
 
 ## 参数说明
@@ -164,8 +164,8 @@ clean_embedded.py 保护的东西，.gitignore 不要随便忽略。
 
 ```powershell
 # 1. 先看会删什么
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "工程目录" --keep-logs
+python clean_embedded.py -r "path\to\your_project" --keep-logs
 
 # 2. 确认后再删
-python "F:\STM32project\Keil中间文件清理脚本\clean_embedded.py" -r "工程目录" --keep-logs --yes
+python clean_embedded.py -r "path\to\your_project" --keep-logs --yes
 ```
